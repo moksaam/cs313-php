@@ -1,0 +1,78 @@
+#header {
+   font-size: 5em;
+   font-variant: small-caps;
+   color: silver;
+   background-color: black;
+   margin-left: auto;
+   margin-right: auto;
+   
+}
+
+#list {
+   transition: width 1s;
+   transition-duration: 0.5s;
+   transition-timing-function: ease-in-out;
+   transition-delay: initial;
+}
+
+.menu {
+   list-style:none;
+   margin: 0;
+   padding: 1;
+   margin-bottom: 5;
+}
+
+.menu li {
+   display: inline;
+}
+
+.menu a {
+   float: left;
+   color: silver;
+   background: slategrey;
+   text-decoration: none;
+   text-transform: uppercase;
+   padding: 15px 20px;
+   border: 1px solid silver;
+   margin-right: -1px;
+}
+
+.menu a:hover {
+   background: silver;
+   color: black;
+}
+
+.weeks li {
+   display: block;
+   padding: 20px;
+}
+
+.weeks a {
+   color: steelblue;
+   text-decoration: none;
+   text-transform: uppercase;
+}
+
+.weeks a:hover {
+   color: white;
+   background: silver;
+   padding: 20px;
+}
+
+#pic {
+   height: 60%;
+   width: 60%;
+   align-self: center;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+#intro {
+   color: black;
+   background-color: white;
+}
+
+body {
+    background-color: black;
+}
