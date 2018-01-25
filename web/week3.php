@@ -2,7 +2,7 @@
 // Variables for our form
 $username = $email = $cs = $web = $cit = $ce = $comments = "";
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+/*if ($_SERVER["REQUEST_METHOD"] == "POST") {
    $username = test_input($_POST["username"]);
    $email = test_input($_POST["email"]);
    $major = test_input($_POST["major"]);
@@ -16,7 +16,7 @@ function test_input($data) {
   
    return $data;
 }
-
+*/
 // Check if the form has been submitted
 if (isset($_POST['submit'])) {
    
