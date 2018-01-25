@@ -14,6 +14,19 @@ if (isset($_POST['submit'])) {
       $selected_major = $_POST['major'];
       echo $selected_major;
    }
+
+}
+
+echo "<br>Countries: ";
+
+
+
+if (isset($_POST['country'])) {
+   $countries = $_POST['country'];
+   
+   foreach($countries as $selected) {
+      echo $selected . " ";
+   }         
 }
 
 echo "<br><br>Comments: ";
