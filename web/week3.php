@@ -18,7 +18,7 @@ function test_input($data) {
 }
 
 // Check if the form has been submitted
-if (isset($_POST['submit']) {
+if (isset($_POST['submit'])) {
    
    $username = $_REQUEST["username"];
    
