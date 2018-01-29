@@ -100,7 +100,7 @@ session_start();
                echo ("Nothing added to cart.");
          }
          
-         $_SESSION['iQ'] = array compact('apple' => $appleQty, 'banana' => $bananaQty, 'orange' => $orangeQty, 'peach' => $peachQty)
+         $_SESSION['iQ'] = compact('apple' => $appleQty, 'banana' => $bananaQty, 'orange' => $orangeQty, 'peach' => $peachQty)
          echo '<br />The ' . $_SESSION['iQ'] . ' submit button was pressed<br />';
 }
 ?>   
