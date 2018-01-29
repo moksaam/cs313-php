@@ -78,7 +78,7 @@ session_start();
          <input id="addPeachToCart" type="submit" name="submit" value="Add to Cart!"></div>
       <?php
       if (isset($_POST['action'])) {
-         
+         $appleQty = $bananaQty = $orangeQty = $peachQty = 0;
          switch (isset($_POST)) {
             case isset($_POST['apple']):
             $appleQty = $_POST['apple'];
