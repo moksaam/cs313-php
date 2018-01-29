@@ -78,9 +78,29 @@ session_start();
          <input id="addPeachToCart" type="submit" name="submit" value="Add to Cart!"></div>
       <?php
       if (isset($_POST['action'])) {
-         $itemquantity = $_SESSION['itemQty'];
+         $itemquantity;
+         switch (isset($_POST)) {
+            case isset($_POST['apple']):
+            $appleQty = $_POST['apple'];
+            break;
+            
+            case isset($_POST['banana']):
+            $bananaQty = $_POST['banana'];
+            break;
+            
+            case isset($_POST['orange']):
+            $orangeQty = $_POST['orange'];
+            break;
+            
+            case isset($_POST['peach']):
+            $peachQty = $_POST['peach'];
+            break;
+            
+            default:
+               echo ("Nothing added to cart.");
+         }
          
-         $_SESSION['iQ'] = $itemquantity;
+         $_SESSION['iQ'] = array compact('apple' => $appleQty, 'banana' => $bananaQty, 'orange' => $orangeQty, 'peach' => $peachQty)
          echo '<br />The ' . $_SESSION['iQ'] . ' submit button was pressed<br />';
 }
 ?>   
