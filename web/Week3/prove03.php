@@ -80,7 +80,7 @@ session_start();
       if (isset($_POST['action'])) {
          $itemquantity = $_SESSION['itemQty'];
          foreach ($_SESSION['itemQty'] as $key =? $value) {
-            if ($value < 0) {
+            if ($value > 0) {
                $count = $value + $_SESSION['itemQty'][$value];
             }            
          }
