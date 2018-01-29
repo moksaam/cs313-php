@@ -78,7 +78,15 @@ session_start();
          <input id="addPeachToCart" type="submit" name="submit" value="Add to Cart!"></div>
       <?php
       if (isset($_POST['action'])) {
-         $itemquantity = $_POST['peach'];
+         $itemquantity = $_SESSION['itemQty'];
+         foreach ($_SESSION['itemQty'] as $key =? $value) {
+            if ($value < 0) {
+               $count = $value + $_SESSION['itemQty'][$value];
+            }
+            else {
+               $value = 0
+            }
+         }
          $_SESSION['iQ'] = $itemquantity;
          echo '<br />The ' . $_SESSION['iQ'] . ' submit button was pressed<br />';
 }

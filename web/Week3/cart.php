@@ -17,6 +17,7 @@
       if (isset($_SESSION['iQ'])) {
          // Added stuff
          print_r($_SESSION['itemCost']);
+         print_r($_SESSION['itemQty']);
          print_r($_SESSION['iQ']);
          $_SESSION['iQ'] = $qnty;
          echo ('<br />The ' . $qnty . ' submit button was pressed<br />');
@@ -33,7 +34,7 @@
          </tr>
          <?php
          $total = 0;
-         echo $_SESSION["iQ"];
+         
          foreach ($_SESSION['itemQty'] as $itemID => $value) {
             if ($value != 0) {            
                echo("<tr>");
