@@ -54,28 +54,28 @@ session_start();
          <span>A delicious red apple.</span><br>
          <label for="apple">Quantity: 
          <input type="text" name="apple" size="2" maxlength="2" value=""><br>
-         <input id="addAppleToCart" type="submit" name="submit" value="Add to Cart!"></div>
+         <input id="addAppleToCart" class="addToCart" type="submit" name="submit" value="Add to Cart!"></div>
          
       <div class="item-container">
          <img src="banana.jpg" alt="Banana">Price: $3.00<br>
          <span>A beautiful bunch of bananas.</span><br>
          <label for="apple">Quantity: 
          <input type="text" name="banana" size="2" maxlength="2" value=""><br>
-         <input id="addBananaToCart" type="submit" name="submit" value="Add to Cart!"></div>
+         <input id="addBananaToCart" class="addToCart" type="submit" name="submit" value="Add to Cart!"></div>
          
       <div class="item-container">
          <img src="orange.jpg" alt="Orange">Price $2.25<br>
          <span>A perfectly rounded orange.</span><br>
          <label for="apple">Quantity: 
          <input type="text" name="orange" size="2" maxlength="2" value=""><br>
-         <input id="addOrangeToCart" type="submit" name="submit" value="Add to Cart!"></div>
+         <input id="addOrangeToCart" class="addToCart" type="submit" name="submit" value="Add to Cart!"></div>
          
       <div class="item-container">
          <img src="peach.jpg" alt="Peach">Price: $2.50<br>
          <span>A most desirable peach.</span><br>
          <label for="apple">Quantity: 
          <input type="text" name="peach" size="2" maxlength="2" value=""><br>
-         <input id="addPeachToCart" type="submit" name="submit" value="Add to Cart!"></div>
+         <input id="addPeachToCart" class="addToCart" type="submit" name="submit" value="Add to Cart!"></div>
       <?php
       if (isset($_POST['action'])) {
          $appleQty = $bananaQty = $orangeQty = $peachQty = '';

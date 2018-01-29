@@ -64,12 +64,12 @@ body {
    font-size: 18px;
 }
 
-#addToCart {
+.addToCart {
    font-size: 18px;
    background: black;
    color: white;
 }
 
-#addToCart:hover {
+.addToCart:hover {
    background: green;
 }
