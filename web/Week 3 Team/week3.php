@@ -1,7 +1,7 @@
 <?php 
-$username = $_POST["username"];
-$email = $_POST["email"];
-$comments = $_POST["comments"];
+$username = htmlspecialchars($_POST["username"]);
+$email = htmlspecialchars($_POST["email"]);
+$comments = htmlspecialchars($_POST["comments"]);
 echo "Username: "; 
 echo $username;
 echo "<br>Email: ";
@@ -11,7 +11,7 @@ echo "<br>Major: ";
 if (isset($_POST['submit'])) {
    if (isset($_POST['major'])) {
          
-      $selected_major = $_POST['major'];
+      $selected_major = htmlspecialchars($_POST['major']);
       echo $selected_major;
    }
 

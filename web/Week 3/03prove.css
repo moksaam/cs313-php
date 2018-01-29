@@ -1,0 +1,75 @@
+h1 {
+   color: black;
+   font-variant: small-caps;
+   text-align: left;
+   text-shadow: 2px 2px 4px grey;
+   font-size: 100px;
+   font-weight: bold;
+   background: white;
+   margin-top: 1px;
+   margin-bottom: 10px;
+   margin-left: 20px;
+}
+
+.menu li {
+   display: inline;   
+}
+
+img {
+   width: 85%;
+   height: 100%;
+}
+
+.menu a {
+   float: left;
+   color: black;
+   background: white;
+   text-decoration: none;
+   text-transform: uppercase;
+   padding: 15px 20px;
+   border: 1px solid black;
+   margin-right: -1px;
+}
+
+.menu a:hover {
+   background: red;
+   color: white;
+}
+
+body {
+   background: white;
+}
+
+.main-container {
+  display: flex;
+  height: 500px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+  align-items: baseline;
+  background-color: white;
+}
+
+.item-container {
+  background-color: white;
+  color: black;
+  width: 150px;
+  margin: 10px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 20px;
+}
+
+.item-container > label {
+   font-size: 18px;
+}
+
+#addToCart {
+   font-size: 18px;
+   background: black;
+   color: white;
+}
+
+#addToCart:hover {
+   background: green;
+}
