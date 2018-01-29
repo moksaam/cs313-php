@@ -79,11 +79,7 @@ session_start();
       <?php
       if (isset($_POST['action'])) {
          $itemquantity = $_SESSION['itemQty'];
-         foreach ($_SESSION['itemQty'] as $key =? $value) {
-            if ($value > 0) {
-               $count = $value + $_SESSION['itemQty'][$value];
-            }            
-         }
+         
          $_SESSION['iQ'] = $itemquantity;
          echo '<br />The ' . $_SESSION['iQ'] . ' submit button was pressed<br />';
 }
