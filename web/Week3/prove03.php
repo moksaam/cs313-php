@@ -79,6 +79,7 @@ session_start();
       <?php
       if (isset($_POST['action'])) {
          $appleQty = $bananaQty = $orangeQty = $peachQty = 0;
+         
          switch (isset($_POST)) {
             case isset($_POST['apple']):
             $appleQty = $_POST['apple'];
@@ -100,7 +101,7 @@ session_start();
                echo ("Nothing added to cart.");
          }
          
-         $_SESSION['iQ'] = compact('apple' => $appleQty, 'banana' => $bananaQty, 'orange' => $orangeQty, 'peach' => $peachQty)
+         $_SESSION['iQ'] = compact('apple' => $appleQty, 'banana' => $bananaQty, 'orange' => $orangeQty, 'peach' => $peachQty);
          echo '<br />The ' . $_SESSION['iQ'] . ' submit button was pressed<br />';
 }
 ?>   
