@@ -37,7 +37,7 @@ session_start();
    
    $totalQty = 0;
    
-   if (isset($_POST['item'])) {
+   if ((isset($_POST['item'])) && (isset($_SESSION['itemQty']))) {
       
       foreach($_SESSION['itemQty'] as $key => $value) {
          
@@ -56,8 +56,7 @@ session_start();
          else {
             echo "Invalid item selected.";
          }
-      }
-      
+      }      
    }
 ?>
  
