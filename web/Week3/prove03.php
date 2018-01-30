@@ -37,7 +37,7 @@ session_start();
    
    $totalQty = 0;
    
-   if ((isset($_POST['apple'])) && (isset($_SESSION['itemQty']))) {
+   if ((isset($_POST['submit'])) && (isset($_SESSION['itemQty']))) {
       
       foreach($_SESSION['itemQty'] as $key => $value) {
          $value++;
