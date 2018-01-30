@@ -40,7 +40,7 @@ session_start();
    if ((isset($_POST['submit'])) && (isset($_SESSION['itemQty']))) {
       
       foreach($_SESSION['itemQty'] as $key => $value) {
-         $value++;
+         $_SESSION['itemQty']$value++;
       }      
    }
 ?>
