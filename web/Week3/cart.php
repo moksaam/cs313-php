@@ -18,7 +18,7 @@
          // Added stuff
          print_r($_SESSION['itemCost']);
          print_r($_SESSION['itemQty']);
-         $_SESSION['itemQty'] = $qnty;
+         $qnty = $_SESSION['itemQty'];
          foreach($qnty as $key => $value) {
          echo ('<br />Quantity: ' . $value . 'Fruit: ' . $key . '<br />');
          
