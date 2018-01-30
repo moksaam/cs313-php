@@ -37,20 +37,20 @@ session_start();
    
    $totalQty = 0;
    
-   if ((isset($_POST['item'])) && (isset($_SESSION['itemQty']))) {
+   if ((isset($_POST['action'])) && (isset($_SESSION['itemQty']))) {
       
       foreach($_SESSION['itemQty'] as $key => $value) {
          
-         if ($_POST['item'] == 'apple') {
+         if ($_POST['itemA']) {
             $_SESSION['itemQty']['apple']++;
          }
-         elseif ($_POST['item'] == 'banana') {
+         elseif ($_POST['itemB']) {
             $_SESSION['itemQty']['banana']++;
          }
-         elseif ($_POST['item'] == 'orange') {
+         elseif ($_POST['itemO']) {
             $_SESSION['itemQty']['orange']++;
          }
-         elseif ($_POST['item'] == 'peach') {
+         elseif ($_POST['itemP']) {
             $_SESSION['itemQty']['peach']++;
          }
          else {
@@ -73,7 +73,7 @@ session_start();
    <div class="main-container">
    
       <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
-      <input type="hidden" name="item" value="apple"/>
+      <input type="hidden" name="itemA" value="apple"/>
       <div class="item-container">
          <img src="apple.jpg" alt="Apple">Price: $2.00<br>
          <span>A delicious red apple.</span><br><br>
@@ -81,7 +81,7 @@ session_start();
       </form>
       
       <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
-      <input type="hidden" name="item" value="banana">      
+      <input type="hidden" name="itemB" value="banana">      
       <div class="item-container">
          <img src="banana.jpg" alt="Banana">Price: $3.00<br>
          <span>A beautiful bunch of bananas.</span><br><br>
@@ -89,7 +89,7 @@ session_start();
       </form>
       
       <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
-      <input type="hidden" name="item" value="orange">      
+      <input type="hidden" name="itemO" value="orange">      
       <div class="item-container">
          <img src="orange.jpg" alt="Orange">Price $2.25<br>
          <span>A perfectly rounded orange.</span><br><br>
@@ -97,7 +97,7 @@ session_start();
       </form>
       
       <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
-      <input type="hidden" name="item" value="peach"/>
+      <input type="hidden" name="itemP" value="peach"/>
       <div class="item-container">
          <img src="peach.jpg" alt="Peach">Price: $2.50<br>
          <span>A most desirable peach.</span><br><br>
