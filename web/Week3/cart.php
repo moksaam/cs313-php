@@ -14,13 +14,15 @@
          </ul>
       </div> 
       <?php
-      if (isset($_SESSION['iQ'])) {
+      if (isset($_SESSION['itemQty'])) {
          // Added stuff
          print_r($_SESSION['itemCost']);
          print_r($_SESSION['itemQty']);
-         print_r($_SESSION['iQ']);
-         $_SESSION['iQ'] = $qnty;
-         echo ('<br />The ' . $qnty . ' submit button was pressed<br />');
+         $_SESSION['itemQty'] = $qnty;
+         foreach($qnty as $key => $value) {
+         echo ('<br />Quantity: ' . $value . 'Fruit: ' . $key . '<br />');
+         
+         }
 }
 ?> 
       <br><br>

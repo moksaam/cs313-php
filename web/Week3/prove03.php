@@ -36,6 +36,8 @@ session_start();
    }
    
    $totalQty = 0;
+   
+   
 ?>
  
 <h1>Items</h1>
