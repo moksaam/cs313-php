@@ -36,8 +36,35 @@ session_start();
    }
    
    $totalQty = 0;
-?>
 
+      $appleQty = $bananaQty = $orangeQty = $peachQty = '';
+      if (isset($_POST['action'])) {         
+         
+         switch (isset($_POST)) {
+            case isset($_POST['apple']):
+            $appleQty = $_POST['apple'];
+            break;
+            
+            case isset($_POST['banana']):
+            $bananaQty = $_POST['banana'];
+            break;
+            
+            case isset($_POST['orange']):
+            $orangeQty = $_POST['orange'];
+            break;
+            
+            case isset($_POST['peach']):
+            $peachQty = $_POST['peach'];
+            break;
+            
+            default:
+               echo ("Nothing added to cart.");
+         }
+         
+         $_SESSION['iQ'] = compact($appleQty, $bananaQty, $orangeQty, $peachQty);
+         print_r ('<br />The ' . $_SESSION['iQ'] . ' submit button was pressed<br />');
+}
+?>  
 <h1>Items</h1>
 
 <div id="items">
@@ -76,35 +103,7 @@ session_start();
          <label for="apple">Quantity: 
          <input type="text" name="peach" size="2" maxlength="2" value=""><br>
          <input id="addPeachToCart" class="addToCart" type="submit" name="submit" value="Add to Cart!"></div>
-      <?php
-      $appleQty = $bananaQty = $orangeQty = $peachQty = '';
-      if (isset($_POST['action'])) {         
-         
-         switch (isset($_POST)) {
-            case isset($_POST['apple']):
-            $appleQty = $_POST['apple'];
-            break;
-            
-            case isset($_POST['banana']):
-            $bananaQty = $_POST['banana'];
-            break;
-            
-            case isset($_POST['orange']):
-            $orangeQty = $_POST['orange'];
-            break;
-            
-            case isset($_POST['peach']):
-            $peachQty = $_POST['peach'];
-            break;
-            
-            default:
-               echo ("Nothing added to cart.");
-         }
-         
-         $_SESSION['iQ'] = compact($appleQty, $bananaQty, $orangeQty, $peachQty);
-         print_r ('<br />The ' . $_SESSION['iQ'] . ' submit button was pressed<br />');
-}
-?>   
+       
    </div>
 </form>
 </body>
