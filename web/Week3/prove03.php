@@ -37,7 +37,7 @@ session_start();
    
    $totalQty = 0;
    
-   if ((isset($_POST['items'])) && (isset($_SESSION['itemQty']))) {
+   if ((isset($_POST['submit'])) && (isset($_SESSION['itemQty']))) {
       
       foreach($_SESSION['itemQty'] as $key => $value) {
          
@@ -71,8 +71,7 @@ session_start();
 <br><br><br><br>
 
    <div class="main-container">
-   <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
-   <input type="hidden" name="items" value="submit"/>
+   
       <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
       <input type="hidden" name="itemA" value="apple"/>
       <div class="item-container">
@@ -104,7 +103,6 @@ session_start();
          <span>A most desirable peach.</span><br><br>
          <input id="addPeachToCart" class="addToCart" type="submit" name="submit" value="Add to Cart!"></div>
       </form>
-   </form>
    </div>
 
 </body>
