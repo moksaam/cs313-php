@@ -37,25 +37,10 @@ session_start();
    
    $totalQty = 0;
    
-   if ((isset($_POST['Add to Cart!'])) && (isset($_SESSION['itemQty']))) {
+   if ((isset($_POST['apple'])) && (isset($_SESSION['itemQty']))) {
       
       foreach($_SESSION['itemQty'] as $key => $value) {
-         
-         if ($_POST['itemA']) {
-            $_SESSION['itemQty']['apple']++;
-         }
-         elseif ($_POST['itemB']) {
-            $_SESSION['itemQty']['banana']++;
-         }
-         elseif ($_POST['itemO']) {
-            $_SESSION['itemQty']['orange']++;
-         }
-         elseif ($_POST['itemP']) {
-            $_SESSION['itemQty']['peach']++;
-         }
-         else {
-            echo ("Invalid item selected.");
-         }
+         $value++;
       }      
    }
 ?>
