@@ -42,19 +42,19 @@ session_start();
       foreach($_SESSION['itemQty'] as $key => $value) {
          
          if ($_POST['item'] == 'apple') {
-            ['apple']$value++;
+            $_SESSION['itemQty']['apple']++;
          }
          elseif ($_POST['item'] == 'banana') {
-            ['banana']$value++;
+            $_SESSION['itemQty']['banana']++;
          }
          elseif ($_POST['item'] == 'orange') {
-            ['orange']$value++;
+            $_SESSION['itemQty']['orange']++;
          }
          elseif ($_POST['item'] == 'peach') {
-            ['peach']$value++;
+            $_SESSION['itemQty']['peach']++;
          }
          else {
-            echo "Invalid item selected.";
+            echo ("Invalid item selected.");
          }
       }      
    }
