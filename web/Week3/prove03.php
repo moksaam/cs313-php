@@ -102,7 +102,7 @@ session_start();
          }
          
          $_SESSION['iQ'] = compact($appleQty, $bananaQty, $orangeQty, $peachQty);
-         echo '<br />The ' . $_SESSION['iQ'] . ' submit button was pressed<br />';
+         print_r ('<br />The ' . $_SESSION['iQ'] . ' submit button was pressed<br />');
 }
 ?>   
    </div>
