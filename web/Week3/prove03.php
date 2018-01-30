@@ -81,21 +81,23 @@ session_start();
       </form>
       
       <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
-      <input type="hidden" name="action" value="submit">      
+      <input type="hidden" name="item" value="banana">      
       <div class="item-container">
          <img src="banana.jpg" alt="Banana">Price: $3.00<br>
          <span>A beautiful bunch of bananas.</span><br><br>
          <input id="addBananaToCart" class="addToCart" type="submit" name="submit" value="Add to Cart!"></div>
       </form>
       
-      <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post"><input type="hidden" name="action" value="submit"/>      
+      <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+      <input type="hidden" name="item" value="orange">      
       <div class="item-container">
          <img src="orange.jpg" alt="Orange">Price $2.25<br>
          <span>A perfectly rounded orange.</span><br><br>
          <input id="addOrangeToCart" class="addToCart" type="submit" name="submit" value="Add to Cart!"></div>
       </form>
       
-      <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post"><input type="hidden" name="action" value="submit"/>
+      <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+      <input type="hidden" name="item" value="peach"/>
       <div class="item-container">
          <img src="peach.jpg" alt="Peach">Price: $2.50<br>
          <span>A most desirable peach.</span><br><br>
