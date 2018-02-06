@@ -46,7 +46,7 @@
             }
          }
          ?>
-
+          <tr>Total</tr>
       </table>
       </div>
    </body>

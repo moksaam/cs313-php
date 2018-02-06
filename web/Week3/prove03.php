@@ -41,7 +41,7 @@ session_start();
     }
   }
 
-  var_dump($_SESSION['itemQty']);
+  //var_dump($_SESSION['itemQty']);
 }
 ?>
 <h1>Items</h1>
