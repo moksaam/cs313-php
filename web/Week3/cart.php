@@ -11,10 +11,11 @@
       <?php
       require("header.php");
       ?>
-      
+
       <br><br>
       <br><br>
-      <table>
+      <div>
+      <table class="table">
          <tr>
             <th>Product</th>
             <th>Quantity</th>
@@ -47,5 +48,6 @@
          ?>
 
       </table>
+      </div>
    </body>
 </html>

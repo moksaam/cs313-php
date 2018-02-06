@@ -75,15 +75,20 @@ body {
 }
 
 th {
-  background-color: teal;
-  color: black;
+  background-color: green;
+  color: white;
+  font-size: 2em;
 }
 
 tr:nth-child(odd) {
-  background-color: burlywood;
+  background-color: dimgrey;
 }
 
 table {
   text-align: center;
-  background-color: chocolate;
+  background-color: white;
+}
+
+.table {
+  align-content: center;
 }
