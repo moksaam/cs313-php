@@ -1,4 +1,4 @@
-<? session_start(); ?>
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
    <head>
@@ -7,24 +7,20 @@
    </head>
    <body>
       <h1>Cart</h1>
-      <div id="items">
-         <ul class="menu">
-            <li><a href="prove03.php">Browse</a></li>
-            <li><a href="checkout.html">Checkout</a></li>
-         </ul>
-      </div> 
+
       <?php
-      if (isset($_SESSION['itemQty'])) {
+      require("header.php");
+      /*
+      if (isset($_SESSION['iQ'])) {
          // Added stuff
          print_r($_SESSION['itemCost']);
          print_r($_SESSION['itemQty']);
-         $qnty = $_SESSION['itemQty'];
-         foreach($qnty as $key => $value) {
-         echo ('<br />Quantity: ' . $value . 'Fruit: ' . $key . '<br />');
-         
-         }
+         print_r($_SESSION['iQ']);
+         $_SESSION['iQ'] = $qnty;
+         echo ('<br />The ' . $qnty . ' submit button was pressed<br />');
 }
-?> 
+*/
+?>
       <br><br>
       <br><br>
       <table>
@@ -36,19 +32,29 @@
          </tr>
          <?php
          $total = 0;
-         
-         foreach ($_SESSION['itemQty'] as $itemID => $value) {
-            if ($value != 0) {            
+
+         if (isset($_SESSION["error"])) {
+           echo $_SESSION["error"] . '<br>';
+           unset($_SESSION["error"]);
+         }
+
+         foreach ($_SESSION['itemQty'] as $itemID => $quantity) {
+            if ($quantity != 0) {
                echo("<tr>");
                echo("<td>".$_SESSION['itemName'][$itemID]."</td>");
-               echo("<td>".$_SESSION['itemQty'][$itemID]."</td>");
-               echo("<td>".$_SESSION['itemCost'][$itemID]."</td>");
-               
+               echo("<td>".$quantity."</td>");
+               echo("<td>".$quantity * $_SESSION['itemCost'][$itemID]."</td>");
+               echo '<td><form action="updateCart.php" method="post">'.
+                    '<input type="hidden" name="action" value="update"/>' .
+                    '<input type="text" name="' . $itemID . '" value="' . $quantity . '">' .
+                    '<button type="submit">Update</button>' .
+                    '</form></td>';
+
                echo("</tr>");
             }
          }
          ?>
-           
+
       </table>
    </body>
 </html>
