@@ -10,17 +10,8 @@
 
       <?php
       require("header.php");
-      /*
-      if (isset($_SESSION['iQ'])) {
-         // Added stuff
-         print_r($_SESSION['itemCost']);
-         print_r($_SESSION['itemQty']);
-         print_r($_SESSION['iQ']);
-         $_SESSION['iQ'] = $qnty;
-         echo ('<br />The ' . $qnty . ' submit button was pressed<br />');
-}
-*/
-?>
+      ?>
+      
       <br><br>
       <br><br>
       <table>

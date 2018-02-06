@@ -73,3 +73,17 @@ body {
 .addToCart:hover {
    background: green;
 }
+
+th {
+  background-color: teal;
+  color: black;
+}
+
+tr:nth-child(odd) {
+  background-color: burlywood;
+}
+
+table {
+  text-align: center;
+  background-color: chocolate;
+}
