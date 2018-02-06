@@ -15,7 +15,7 @@
       <br><br>
       <br><br>
       <div>
-      <table class="table">
+      <table class="table-layout">
          <tr>
             <th>Product</th>
             <th>Quantity</th>

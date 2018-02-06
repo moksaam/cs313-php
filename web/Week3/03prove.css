@@ -86,10 +86,12 @@ tr:nth-child(odd) {
 }
 
 table {
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
   background-color: white;
 }
 
-.table {
+.table-layout {
   align-content: center;
 }
