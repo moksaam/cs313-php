@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-// 
+// We use this to update our cart quantities
 if (isset($_POST['action']) && $_POST['action'] == 'update') {
 
   // $value is ignored
