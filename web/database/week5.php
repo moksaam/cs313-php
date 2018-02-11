@@ -3,6 +3,12 @@
 
 <h1>Database</h1>
 
+<div>
+<td>
+<th>Title</th>
+<th>Director</th>
+<th>Genre</th>
+<th>Year Published</th>
 <?php
 
 $dbUrl = getenv('DATABASE_URL');
@@ -27,11 +33,11 @@ $results = $movies->fetchAll(PDO::FETCH_ASSOC);
 
 foreach ($results as $row)
 {
-	echo "<p><strong>" . $row['title'] . " " . $row['director'] . ":" . $row['genre'] . "</strong> - " . $row['year_published'] . " " . $row['creation_date'] . "</p><br>";
+	echo "<td>" . $row['title'] . "</td><td>" . $row['director'] . "</td><td>" . $row['genre'] . "</td><td>" . $row['year_published'] . "</td>";
 }
 
 
 ?>
-
+</div>
 </body>
 </html>
