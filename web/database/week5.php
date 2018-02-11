@@ -32,3 +32,6 @@ foreach ($results as $row)
 
 
 ?>
+
+</body>
+</html>
