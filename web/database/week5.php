@@ -4,7 +4,7 @@
 <h1>Database</h1>
 
 <div>
-<td>
+<table>
 <th>Title</th>
 <th>Director</th>
 <th>Genre</th>
@@ -38,6 +38,7 @@ foreach ($results as $row)
 
 
 ?>
+</table>
 </div>
 </body>
 </html>
