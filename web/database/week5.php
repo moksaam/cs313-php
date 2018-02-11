@@ -5,10 +5,12 @@
 
 <div>
 <table>
+<tr>
 <th>Title</th>
 <th>Director</th>
 <th>Genre</th>
 <th>Year Published</th>
+</tr>
 <?php
 
 $dbUrl = getenv('DATABASE_URL');
