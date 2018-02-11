@@ -33,7 +33,7 @@ $results = $movies->fetchAll(PDO::FETCH_ASSOC);
 
 foreach ($results as $row)
 {
-	echo "<td>" . $row['title'] . "</td><td>" . $row['director'] . "</td><td>" . $row['genre'] . "</td><td>" . $row['year_published'] . "</td>";
+	echo "<tr><td>" . $row['title'] . "</td><td>" . $row['director'] . "</td><td>" . $row['genre'] . "</td><td>" . $row['year_published'] . "</td></tr>";
 }
 
 
