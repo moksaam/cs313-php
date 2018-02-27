@@ -16,7 +16,7 @@ class USER {
          
          $statement->bindparam(":uname", $uname);
          $statement->bindparam(":umail", $umail);
-         $statement->bindparam(":upass", $upass);
+         $statement->bindparam(":upass", $new_password);
          $statement->execute();
          
          return $statement;
@@ -32,23 +32,24 @@ class USER {
       try {
          $statement = $this->db->prepare("SELECT * FROM phpDB.user_login WHERE user_name=:uname  OR user_email=:umail LIMIT 1");
          $statement->execute(array(':uname'=>$uname, ':umail'=>$umail));
-         $userRow=$stmt->fetch(PDO::FETCH_ASSOC);
+         $userRow=$statement->fetch(PDO::FETCH_ASSOC);
          
-         if($stmt->rowCount() > 0) {
+         if($statement->rowCount() > 0) {
             
-            if(password_verify($upass, $userRow['user_pass'])) {
-               
+            if(password_verify($upass, $userRow['user_password'])) {
+               echo "true";
                $_SESSION['user_session'] = $userRow['user_id'];
                return true;
             }
-            else {             
+            else {          
+                echo "false";
                return false;
             }
          }
       }
       catch(PDOException $ex) {
          print "<p>ERROR:" . $ex->getMessage() . "</p><br>";
-         die();
+         return false;
       }
    }
    
@@ -56,6 +57,9 @@ class USER {
       
       if(isset($_SESSION['user_session'])) {
          return true;
+      }
+      else {
+          return false;
       }
    }
    

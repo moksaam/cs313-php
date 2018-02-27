@@ -1,4 +1,5 @@
-<?php session_start(); 
+<?php 
+session_start(); 
 //phpinfo();
 ?>
 <!DOCTYPE html>
@@ -57,7 +58,7 @@
             </div>
             <br>
             
-            <label>Have an account?<a href="index.php">Sign In</a></label>
+            <label>Have an account? <a href="signin.php">Sign In</a></label>
             
             </form>
             

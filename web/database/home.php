@@ -1,3 +1,18 @@
+<?php 
+session_start(); 
+//phpinfo();
+
+require_once ("dbconfig.php");
+
+
+$movies = $db_con->query('SELECT * FROM phpdb.movies');
+$results = $movies->fetchAll(PDO::FETCH_ASSOC);
+foreach ($results as $row)
+{
+	echo "<tr><td>" . $row['title'] . "</td><td>" . $row['director'] . "</td><td>" . $row['genre'] . "</td><td>" . $row['year_published'] . "</td></tr>";
+}
+
+?>
 <!DOCTYPE html>
 <html>
 
@@ -8,31 +23,28 @@
 
    <body>
       <div class="header">
-         <div class="left_side">
+            <div class="left_side">
             
-         </div>
-         
-         <div class="right_side">
-            <label><a href="logout.php?logout=true">Logout</a></label>
-         </div>
-         
-         <div class="content">
-            <h2>Welcome, to the PHP driven database.</h2>
-         </div>
-   </body>
+            </div>
+            
+            <div class="right_side">
+                  <label><a href="logout.php?logout=true">Logout</a></label>
+            </div>
+            
+            <div class="content">
+                  <h2>Welcome, to the PHP driven database.</h2>
+            </div>
 
-   <?php
-      
-      include_once ("dbconfig.php");
+            <div class="tables_list">
+                  <h3>Available Tables</h3>
+                  <ul>
+                        <li></li>
+                        <li></li>
+                  </ul>
+                  <br>
+                  <a href="create_list.php"><h3>Create New List</h3></a>
+            </div>
+      </div>
+</body>
 
-      if(!$user->is_loggedIn()) {
-         
-         $user->redirect('index.php');
-      }
-      
-      $user_id = $_SESSION['user_session'];
-      $statement = $db_con->prepare("SELECT * FROM user_login WHERE user_id=:id");
-      $statement->execute(array(":user_id"=>$user_id));
-      $userRow = $statement->fetch(PDO::FETCH_ASSOC);
-   ?>
 </html>

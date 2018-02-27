@@ -1,6 +1,15 @@
 <?php
 
 $dbUrl = getenv('DATABASE_URL');
+
+$password = getenv("password");
+
+if (empty($dbUrl)) {
+    // example localhost configuration URL with postgres username and a database called cs313db
+    $dbUrl = "postgres://moksaam:asnm0103@localhost:5432/cs313db";
+}
+
+
 $dbopts = parse_url($dbUrl);
 
 $dbHost = $dbopts["host"];
