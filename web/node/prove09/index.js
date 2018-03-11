@@ -36,19 +36,19 @@ function calculateRate(response, type, weight) {
     var shippingCost;
 
     switch (type) {
-        case 'stamped': 
+        case "stamped": 
             shippingCost = calcRate.getStampedRate(weight);
             console.log('shippingCost');
             break;
-        case 'metered':
+        case "metered":
             shippingCost = calcRate.getMeteredRate(weight);
             console.log('shippingCost');
             break;
-        case 'flats':
+        case "flats":
             shippingCost = calcRate.getFlatsRate(weight);
             console.log('shippingCost');
             break;
-        case 'firstClass':
+        case "firstClass":
             shippingCost = calcRate.getFirstClassRate(weight);
             console.log('shippingCost');
             break;
