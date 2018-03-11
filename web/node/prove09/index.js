@@ -29,10 +29,33 @@ function calculatePostalRate(request, response) {
 
     var type = String(req.query.type);
     var weight = Number(req.query.weight);
-    var shippingCost =  calcRate.calcRate(type, weight);
+    calcRate(type, weight);
+
+   
+};
+
+function calcRate(response, type, weight) {
+    var shippingCost;
+
+    switch (type) {
+        case 'stamped': 
+            shippingCost = calcRate.getStampedRate(weight);
+            break;
+        case 'metered':
+            shippingCost = calcRate.getMeteredRate(weight);
+            break;
+        case 'flats':
+            shippingCost = calcRate.getFlatsRate(weight);
+            break;
+        case 'firstClassRet':
+            shippingCost = calcRate.getFirstClassRate(weight);
+            break;
+        default:
+            console.error('Error: No Postage Selected.');
+            break;
+    }
 
     var params = {Type: type, Weight: weight, Result: shippingCost};
 
     response.render('pages/getRate', params);
-}
-
+};

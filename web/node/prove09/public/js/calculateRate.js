@@ -1,24 +1,3 @@
-function calcRate(type, weight) {
-
-    switch (type) {
-        case 'stamped': 
-            return getStampedRate(weight);
-            break;
-        case 'metered':
-            return getMeteredRate(weight);
-            break;
-        case 'flats':
-            return getFlatsRate(weight);
-            break;
-        case 'firstClassRet':
-            return getFirstClassRate(weight);
-            break;
-        default:
-            console.error('Error: No Postage Selected.');
-            break;
-    }
-};
-
 function getStampedRate(weight) {
     if (weight <= 1) {
         return 0.50;
