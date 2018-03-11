@@ -1,5 +1,5 @@
 {
-    "name":    "postal_rate_calculator",
+    "name": "postal_rate_calculator",
     "version": "1.0.0",
     "description": "",
     "author": "John Memmott”",
@@ -9,8 +9,8 @@
         "express": "^4.16.2",
         "npm": "^5.7.1"
     },
-    "repository" : {
-        "type" : "git",
-        "url" : ""
+    "repository": {
+        "type": "git",
+        "url": ""
     }
- }
+}

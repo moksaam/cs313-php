@@ -16,7 +16,7 @@ app.get('/', function(request, response) {
     response.render('pages/index');
 });
 
-app.listen(port, function() {
+app.listen(app.get('port'), function() {
     console.log('Server listening on port ' + app.get('port'));
 });
 
