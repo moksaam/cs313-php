@@ -1,4 +1,4 @@
-function calculateRate(type, weight) {
+function calcRate(type, weight) {
 
     switch (type) {
         case 'stamped': 
