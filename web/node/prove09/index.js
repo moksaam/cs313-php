@@ -3,7 +3,7 @@
 var express = require('express');
 var app = express();
 var url = require('url');
-var calcRate = require('./public/js/calculateRate.js');
+var calcRate = require('/public/js/calculateRate.js');
 
 app.set('port', (process.env.PORT || 5000));
 
@@ -20,7 +20,7 @@ app.listen(app.get('port'), function() {
     console.log('Server listening on port ' + app.get('port'));
 });
 
-app.get('calcPostalRate', function(response, request) {
+app.get('calcRate', function(response, request) {
     calculatePostalRate(request, response);
 });
 
