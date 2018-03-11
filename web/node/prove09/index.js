@@ -53,7 +53,7 @@ function calculateRate(response, type, weight) {
             break;
     }
 
-    var params = {Type: type, Weight: weight, Result: shippingCost};
+    var params = {type: type, weight: weight, result: shippingCost};
 
     response.render('pages/getRate', params);
 };
