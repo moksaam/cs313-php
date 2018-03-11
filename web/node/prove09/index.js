@@ -29,9 +29,9 @@ function calculatePostalRate(request, response) {
 
     var type = String(req.query.type);
     var weight = Number(req.query.weight);
-    var shippingCost =  calcRate.calculateRate(type, weight);
+    var shippingCost =  calcRate.calcRate(type, weight);
 
-    var params = {Type: type, Weight: weight, Resutlt: shippingCost};
+    var params = {Type: type, Weight: weight, Result: shippingCost};
 
     response.render('pages/getRate', params);
 }
