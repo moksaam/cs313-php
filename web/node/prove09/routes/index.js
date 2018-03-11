@@ -20,7 +20,7 @@ app.listen(app.get('port'), function() {
     console.log('Server listening on port ' + app.get('port'));
 });
 
-app.get('/calcRate', function(request, response) {
+app.get('/getRate', function(request, response) {
     calculatePostalRate(request, response);
 });
 
