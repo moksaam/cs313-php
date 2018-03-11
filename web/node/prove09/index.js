@@ -48,7 +48,7 @@ function calculateRate(response, type, weight) {
             shippingCost = calcRate.getFlatsRate(weight);
             console.log('shippingCost');
             break;
-        case 'firstClassRet':
+        case 'firstClass':
             shippingCost = calcRate.getFirstClassRate(weight);
             console.log('shippingCost');
             break;
