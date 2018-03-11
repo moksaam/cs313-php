@@ -25,7 +25,7 @@ app.get('/getRate', function(response, request) {
 });
 
 function calculatePostalRate(request, response) {
-    var req = url.parse(request.url, true);
+    var req = url.parse(req.url, true);
 
     var type = String(req.query.type);
     var weight = Number(req.query.weight);
