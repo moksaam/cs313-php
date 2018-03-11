@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CS 313 Prove 09</title>
+    </head>
+
+    <body>
+        <main>
+            <div>
+                <h2>Postage Calculator</h2>
+            </div>
+            <form action="getPostalRate" method="get">
+                <div>
+                    <label for="weight">Package Weight</label>
+                    <input type="number" min="0.01" step="0.01" id="weight"/>
+                </div>
+                <select id="postageType">
+                    <option value="stamped">Letters (Stamped)</option>
+                    <option value="metered">Letters (Metered)</option>
+                    <option value="flats">Large Envelopes (Flats)</option>
+                    <option value="firstClass">First-Class Package Service—Retail</option>
+                </select>
+                <input type="submit" value="Calculate Postage">
+            </form>
+        </main>
+    </body>
+</html>

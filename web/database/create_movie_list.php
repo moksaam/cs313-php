@@ -30,24 +30,34 @@ require_once ("dbconfig.php");
         
         <label for="year_published">Year Released: </label>        
         <input name="year_published" id="year_published" size="50" required><br><br>
-        
+        <input type="submit" value="Add"><br><br>
         <?php 
             //$result = pg_query($db_con, "SELECT id, name FROM topic");
                        
             if (isset($_POST)) {
-               $sql = pg_query_params($db_con, "INSERT INTO phpDB.movies (title, director, genre, year_published) VALUES ($1, $2, $3, $4) returning id", array($_POST['title'], $_POST['director'], $_POST['genre'], $_POST['year_published']));
-               
-               $statement = $db_con->prepare("SELECT user_name, user_email FROM phpDB.user_login WHERE user_name=:uname AND user_email=:umail");
+                //$sql = pg_query_params($db_con, "INSERT INTO phpDB.movies (title, director, genre, year_published) VALUES ($1, $2, $3, $4) returning id", array($_POST['title'], $_POST['director'], $_POST['genre'], $_POST['year_published']));
+                
+                //$statement = $db_con->prepare("SELECT user_name, user_email FROM phpDB.user_login WHERE user_name=:uname AND user_email=:umail");
 
-               //$last_id = pg_fetch_assoc($sql)['id'];
-               
-               //foreach ($_POST['topics'] as $topic_id) {
-                 // $sql = pg_query_params($db_con, "INSERT INTO scripture_topic_link (topic_id, scripture_id) VALUES ($1, $2)", array($topic_id, $last_id));
-               //}
-            }            
+                //$last_id = pg_fetch_assoc($sql)['id'];
+                
+                //foreach ($_POST['topics'] as $topic_id) {
+                    // $sql = pg_query_params($db_con, "INSERT INTO scripture_topic_link (topic_id, scripture_id) VALUES ($1, $2)", array($topic_id, $last_id));
+                //}
+                $title = $_POST['title']; 
+                $director = $_POST['director'];
+                $genre = $_POST['genre'];
+                $year_published = $_POST['year_published'];
+
+                $statement = pg_query_params($db_con, "SELECT title, director, genre, year_published FROM phpDB.movies");
+                    
+                $statement->execute(array($_POST['title'], $_POST['director'], $_POST['genre'], $_POST['year_published']));
+                
+                $row = $statement->fetch(PDO::FETCH_ASSOC);
+            }
         ?>
         
-        <input type="submit" value="Add"><br><br>
+        
 
         <p>All fields are required.</p><br>
 
