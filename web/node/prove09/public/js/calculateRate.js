@@ -17,7 +17,6 @@ function calculateRate(type, weight) {
             console.error('Error: No Postage Selected.');
             break;
     }
-    return postage;
 };
 
 function getStampedRate(weight) {
