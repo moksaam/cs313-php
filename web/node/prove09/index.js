@@ -3,7 +3,7 @@
 var express = require('express');
 var app = express();
 var url = require('url');
-var calcRate = require('/public/js/calculateRate.js');
+var calcRate = require('./public/js/calculateRate.js');
 
 app.set('port', (process.env.PORT || 5000));
 
