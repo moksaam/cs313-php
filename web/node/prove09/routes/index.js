@@ -20,3 +20,19 @@ app.listen(port, function() {
     console.log('Server listening on port ' + app.get('port'));
 });
 
+app.get('/calcPostalRate', function(request, response) {
+    calculatePostalRate(request, response);
+});
+
+function calculatePostalRate(request, response) {
+    var req = url.parse(request.url, true);
+
+    var type = String(req.query.type);
+    var weight = Number(req.query.weight);
+    var shippingCost =  calcRate.calculateRate(type, weight);
+
+    var params = {Type: type, Weight: weight, Resutlt: shippingCost};
+
+    response.render('pages/getRate', params);
+}
+
