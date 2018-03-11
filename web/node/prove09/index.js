@@ -38,22 +38,26 @@ function calculateRate(response, type, weight) {
     switch (type) {
         case 'stamped': 
             shippingCost = calcRate.getStampedRate(weight);
+            console.log('shippingCost');
             break;
         case 'metered':
             shippingCost = calcRate.getMeteredRate(weight);
+            console.log('shippingCost');
             break;
         case 'flats':
             shippingCost = calcRate.getFlatsRate(weight);
+            console.log('shippingCost');
             break;
         case 'firstClassRet':
             shippingCost = calcRate.getFirstClassRate(weight);
+            console.log('shippingCost');
             break;
         default:
             console.error('Error: No Postage Selected.');
             break;
     }
 
-    var params = {type: type, weight: weight, result: shippingCost};
+    var params = {type: type, weight: weight, shippingCost: shippingCost};
 
     response.render('pages/getRate', params);
 };
